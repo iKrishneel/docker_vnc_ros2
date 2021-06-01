@@ -15,7 +15,7 @@ RUN ./tmp/deps/vnc.sh && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN ln -s /usr/bin/python3 /usr/local/bin/python
-RUN ln -s /usr/bin/pip3 /usr/bin/pip
+RUN ln -sf /usr/bin/pip3 /usr/bin/pip
 
 ADD image /
 RUN pip install setuptools wheel && pip install -r /usr/lib/web/requirements.txt
