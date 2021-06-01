@@ -27,8 +27,7 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # setup keys
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
-     --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 # setup sources.list
 sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
